@@ -37,7 +37,7 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+#[\AllowDynamicProperties] 
 /**
  * URI Class
  *
@@ -91,7 +91,7 @@ class CI_URI {
 	 * @var	string
 	 */
 	protected $_permitted_uri_chars;
-
+	public $config;
 	/**
 	 * Class constructor
 	 *
