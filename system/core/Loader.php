@@ -49,16 +49,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @author		EllisLab Dev Team
  * @link		https://codeigniter.com/userguide3/libraries/loader.html
  */
+#[\AllowDynamicProperties] 
 class CI_Loader {
-
+	public $load;
+    public $benchmark;
+    public $config;
+    public $log;
+    public $hooks;
+    public $utf8;
+    public $uri;
+    public $router;
+    public $exceptions;
+    public $output;
+    public $security;
+    public $input;
+    public $lang; 
 	// All these are set automatically. Don't mess with them.
 	/**
 	 * Nesting level of the output buffering mechanism
 	 *
 	 * @var	int
 	 */
-	protected $_ci_ob_level;
 
+	protected $_ci_ob_level;
+	
 	/**
 	 * List of paths to load views from
 	 *
@@ -777,16 +791,17 @@ class CI_Loader {
 	 * @param 	bool	$view_cascade	(default: TRUE)
 	 * @return	object
 	 */
+	
 	public function add_package_path($path, $view_cascade = TRUE)
 	{
 		$path = rtrim($path, '/').'/';
-
+		
 		array_unshift($this->_ci_library_paths, $path);
 		array_unshift($this->_ci_model_paths, $path);
 		array_unshift($this->_ci_helper_paths, $path);
-
+		
 		$this->_ci_view_paths = array($path.'views/' => $view_cascade) + $this->_ci_view_paths;
-
+		
 		// Add config file path
 		$config =& $this->_ci_get_component('config');
 		$config->_config_paths[] = $path;
