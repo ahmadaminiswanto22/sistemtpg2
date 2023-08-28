@@ -84,15 +84,6 @@
                                 <li><a href="index.php"><i class="fa fa-home"></i> Home</a>
                                 </li>
                                 
-                                    <li><a><i class="fa fa-edit"></i> Master <span class="fa fa-chevron-down"></span></a>
-                                        <ul class="nav child_menu">
-                                            <li><a href="data_agama.php">Agama</a></li>
-                                            <li><a href="data_negara.php">Kewarganegaraan</a></li>
-                                            <li><a href="data_jurusan.php">Jurusan</a></li>
-                                            <li><a href="data_jenjang.php">Jenjang</a></li>
-                                        </ul>
-                                    </li>
-                                
                                 <li><a href="form_pendaftaran.php"><i class="fa fa-desktop"></i>Pendaftaran</a>
                                 </li>
                                 <li><a href="data_pendaftaran.php"><i class="fa fa-bar-chart-o"></i> Data Pendaftaran</a>
